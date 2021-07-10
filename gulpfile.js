@@ -91,12 +91,15 @@ gulp.task('js', function () {
 gulp.task('copy', function () {
   return gulp.src([
     'source/fonts/**/*.{woff,woff2}',
-    'source/img/**',
-    'source/js/**',
+    'source/img/**/*.{png,jpg,svg}',
+    '!source/img/**/inline-*.svg',
     'source//*.ico'
-    ], {
-      base: 'source'
-    })
+  ], {
+    base: 'source'
+  })
+  .pipe(gulp.dest('build'));
+});
+
   .pipe(gulp.dest('build'));
 });
 
