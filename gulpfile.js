@@ -100,6 +100,13 @@ gulp.task('copy', function () {
   .pipe(gulp.dest('build'));
 });
 
+gulp.task('copybuild', function () {
+  return gulp.src([
+    'source/fonts/**/*.{woff,woff2}',
+    'source//*.ico'
+  ], {
+    base: 'source'
+  })
   .pipe(gulp.dest('build'));
 });
 
