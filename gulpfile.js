@@ -14,6 +14,7 @@ var webp = require('gulp-webp');
 var svgstore = require('gulp-svgstore');
 var posthtml = require('gulp-posthtml');
 var htmlinclude = require('posthtml-include');
+var fileinclude = require('gulp-file-include');
 var del = require('del');
 
 gulp.task('css', function () {
@@ -78,6 +79,13 @@ gulp.task('html', function () {
       htmlinclude()
     ]))
     .pipe(gulp.dest('build'));
+});
+
+gulp.task('js', function () {
+  return gulp.src('source/js/main.js')
+    .pipe(plumber())
+    .pipe(fileinclude())
+    .pipe(gulp.dest('build/js'));
 });
 
 gulp.task('copy', function () {
