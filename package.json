@@ -5,10 +5,13 @@
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.x",
     "autoprefixer": "9.5.x",
-    "browser-sync": "2.26.x",
+    "browser-sync": "^2.27.4",
+    "eslint": "4.16.0",
+    "eslint-config-htmlacademy": "0.4.x",
     "gulp": "4.0.x",
     "gulp-csso": "^3.0.1",
-    "gulp-imagemin": "^5.0.3",
+    "gulp-file-include": "^2.3.0",
+    "gulp-imagemin": "^7.1.0",
     "gulp-plumber": "1.2.x",
     "gulp-postcss": "8.0.x",
     "gulp-posthtml": "^3.0.4",
@@ -19,10 +22,8 @@
     "gulp-webp": "^4.0.1",
     "pixel-glass": "^1.0.13",
     "posthtml-include": "^1.2.0",
-    "stylelint": "9.10.x",
-    "stylelint-config-htmlacademy": "0.1.x",
-    "eslint": "4.16.0",
-    "eslint-config-htmlacademy": "0.4.x"
+    "stylelint": "^13.13.0",
+    "stylelint-config-htmlacademy": "0.1.x"
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",
@@ -35,8 +36,8 @@
   },
   "browserslist": [
     "last 2 versions",
-    "IE 11",
-    "Firefox ESR"
+    "not dead",
+    "not ie <= 11"
   ],
   "editorconfig-cli": [
     "*.json",
@@ -50,6 +51,6 @@
     "node": "8.15"
   },
   "dependencies": {
-    "del": "^4.1.1"
+    "del": "^6.0.0"
   }
 }
