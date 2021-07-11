@@ -135,3 +135,7 @@ gulp.task('cleanimg', function () {
   ]);
 });
 
+gulp.task('cleansvg', function () {
+  return del('build/img/**/inline-*.{png,jpg,svg}');
+});
+
