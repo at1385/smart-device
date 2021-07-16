@@ -3,13 +3,13 @@
   padding-bottom: 67px;
 
   background-color: $darkest;
-  background-image: url("../img/bg-header.png");
+  background-image: url("../img/bg-page-header.png");
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../img/bg-header@2x.png");
+    background-image: url("../img/bg-page-header@2x.png");
   }
 }
 
