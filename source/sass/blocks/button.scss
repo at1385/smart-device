@@ -39,5 +39,24 @@
     box-shadow: 0 0 5px 1px rgba($lightest, 0.3) inset;
   }
 
+  &--filled {
+    background-color: $bright;
+  }
+
+  &--large {
+    padding: 15px 45px;
+
+    font-size: 16px;
+    line-height: 1.3;
+
+    border-color: transparent;
+  }
+}
+
+@media (max-width: $tablet-max-width) {
+  .button {
+    &--large {
+      padding: 15px 30px;
+    }
   }
 }
