@@ -138,4 +138,4 @@ gulp.task('cleansvg', function () {
 });
 
 gulp.task('build', gulp.series('clean', 'copybuild', 'css', 'img', 'webp', 'js', 'sprite', 'html', 'cleansvg'));
-gulp.task('start', gulp.series('clean', 'copy', 'css', 'sprite', 'js', 'html', 'server'));
+gulp.task('start', gulp.series('clean', 'copy', 'css', 'webp', 'sprite', 'js', 'html', 'server'));

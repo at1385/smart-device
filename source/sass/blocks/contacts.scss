@@ -1,0 +1,88 @@
+.contacts {
+  @include list-reset;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  max-width: 450px;
+}
+
+.contacts__item {
+  &:not(:nth-child(2n+1)) {
+    margin-left: 83px;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    padding: 3px;
+
+    line-height: 1;
+    color: $lightest;
+
+    fill: $bright;
+
+    border-radius: 4px;
+    outline: none;
+
+    &:hover,
+    &:focus {
+      background-color: rgba($bright, 0.2);
+      fill: $lightest;
+
+      box-shadow: 0px 0px 5px 1px $bright;
+    }
+
+    &:active {
+      color: rgba($bright, 0.3);
+
+      background-color: rgba($bright, 0.1);
+      fill: rgba($bright, 0.3);
+
+      box-shadow: 0px 0px 5px 1px rgba($bright, 0.3) inset;
+    }
+  }
+
+  svg {
+    margin-right: 18px;
+  }
+}
+
+@media (max-width: $tablet-max-width) {
+  .contacts {
+    width: 90px;
+  }
+
+  .contacts__item {
+    &:not(:nth-child(2n+1)) {
+      margin-left: 25px;
+    }
+
+    svg {
+      margin-right: 0;
+      padding: 0;
+    }
+
+    span {
+      display: none;
+    }
+  }
+
+  .contacts__email-icon {
+    width: 28px;
+    height: 19px;
+  }
+
+  .contacts__phone-icon {
+    width: 23px;
+    height: 23px;
+  }
+}
+
+@media (max-width: $mobile-max-width) {
+  .contacts__item {
+    &:not(:nth-child(2n+1)) {
+      margin-left: 15px;
+    }
+  }
+}

@@ -1,9 +1,1 @@
-<svg width="671" height="641" viewBox="0 0 671 641" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path opacity="0.2" d="M626.842 159.584L352.167 635.334L77.4923 159.584L626.842 159.584Z" stroke="white"/>
-<path opacity="0.2" d="M347.148 357.75L186.5 636L25.8523 357.75L347.148 357.75Z" stroke="white"/>
-<circle cx="77" cy="159" r="5" fill="white"/>
-<circle cx="26" cy="358" r="5" fill="white"/>
-<circle cx="187" cy="636" r="5" fill="white"/>
-<circle cx="352" cy="635" r="5" fill="white"/>
-<circle cx="627" cy="159" r="5" fill="white"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="610.998" height="487" viewBox="0 0 15703 12516" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd"><defs><style>.str0{stroke:#fff;stroke-width:25.7028;stroke-opacity:.2}.fil0{fill:none}.fil1{fill:#fff}</style></defs><g id="Слой_x0020_1"><path class="fil0 str0" d="M15571 144L8511 12371 1452 144z"/><path class="fil0 str0" d="M8382 5237l-4128 7151L125 5237z"/><circle class="fil1" cx="1439" cy="129" r="129"/><circle class="fil1" cx="129" cy="5243" r="129"/><circle class="fil1" cx="4266" cy="12388" r="129"/><circle class="fil1" cx="8507" cy="12362" r="129"/><circle class="fil1" cx="15575" cy="129" r="129"/></g></svg>
