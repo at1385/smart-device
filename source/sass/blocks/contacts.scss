@@ -30,7 +30,7 @@
       background-color: rgba($bright, 0.2);
       fill: $lightest;
 
-      box-shadow: 0px 0px 5px 1px $bright;
+      box-shadow: 0 0 5px 1px $bright;
     }
 
     &:active {
@@ -39,7 +39,7 @@
       background-color: rgba($bright, 0.1);
       fill: rgba($bright, 0.3);
 
-      box-shadow: 0px 0px 5px 1px rgba($bright, 0.3) inset;
+      box-shadow: 0 0 5px 1px rgba($bright, 0.3) inset;
     }
   }
 
