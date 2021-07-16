@@ -4,11 +4,14 @@
 @import "global.scss";
 @import "visually-hidden.scss";
 @import "container.scss";
-
 // blocks
 @import "blocks/button.scss";
-
+// page-header
 @import "blocks/site-logo.scss";
 @import "blocks/contacts.scss";
 @import "blocks/promo.scss";
 @import "blocks/page-header.scss";
+// page-footer
+@import "blocks/accordion.scss";
+@import "blocks/socials.scss";
+@import "blocks/page-footer.scss";
