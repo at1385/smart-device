@@ -9,7 +9,10 @@ html {
 }
 
 body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
   min-width: $mobile-min-width;
+  min-height: 100vh;
   margin: 0;
 
   font-family: "PT Mono", "Courier New", monospace;
