@@ -1,0 +1,180 @@
+.products-and-services {
+  padding-top: 87px;
+  padding-bottom: 127px;
+
+  background-color: $darkest;
+
+  h2 {
+    margin: 0;
+    margin-bottom: 53px;
+
+    @include roboto-condensed-400;
+    font-size: 36px;
+    line-height: 1.4;
+    color: $lightest;
+  }
+}
+
+.products-and-services__list {
+  @include list-reset;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.products-and-services__item {
+  width: 32%;
+  height: 620px;
+
+  &:not(:nth-child(3n)) {
+    margin-right: 2%;
+  }
+}
+
+.products-and-services__link {
+  position: relative;
+
+  display: block;
+  height: 100%;
+  padding-top: 13%;
+  padding-right: 42%;
+  padding-bottom: 63px;
+  padding-left: 12%;
+
+  @include roboto-condensed-400;
+  color: $lightest;
+  font-size: 20px;
+  line-height: 1.5;
+
+  background-repeat: no-repeat;
+  background-position: 50%;
+
+  &--production {
+    background-image: url("../img/bg-products-board-prod-dim.png");
+    background-size: 1092px auto;
+
+    &:hover,
+    &:focus {
+      background-image: url("../img/bg-products-board-prod.png");
+    }
+  }
+
+  &--mounting {
+    background-image: url("../img/bg-products-board-mount-dim.png");
+    background-size: 1012px auto;
+
+    &:hover,
+    &:focus {
+        background-image: url("../img/bg-products-board-mount.png");
+    }
+  }
+
+  &--led {
+    background-image: url("../img/bg-products-led-dim.png");;
+    background-size: 620px auto;
+
+    &:hover,
+    &:focus {
+        background-image: url("../img/bg-products-led.png");
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    width: 63px;
+    height: 63px;
+
+    background-image: url("../img/bg-icon-arrow-pointer.svg");
+    background-repeat: no-repeat;
+    background-position: 50%;
+
+    background-color: $bright;
+  }
+
+  &:hover,
+  &:focus {
+    outline: 2px solid $bright;
+    outline-offset: -2px;
+  }
+
+  &:active {
+    outline: none;
+
+    opacity: 0.2;
+  }
+}
+
+@media (max-width: $tablet-max-width) {
+  .products-and-services {
+    padding-top: 49px;
+    padding-bottom: 78px;
+
+    h2 {
+      margin-bottom: 51px;
+
+      font-size: 32px;
+    }
+  }
+
+  .products-and-services__item {
+    width: 100%;
+    height: 256px;
+
+    &:not(:nth-child(3n)) {
+      margin-bottom: 46px;
+      margin-right: 0;
+    }
+  }
+
+  .products-and-services__link {
+    padding-top: 5.5%;
+    padding-right: 67%;
+    padding-left: 6.2%;
+
+    &--production {
+      background-size: 111% auto;
+    }
+
+    &--mounting {
+      background-size: 273% auto;
+    }
+
+    &--led {
+      background-size: 168% auto;
+    }
+  }
+}
+
+@media (max-width: $mobile-max-width) {
+  .products-and-services {
+    padding-top: 50px;
+    padding-bottom: 64px;
+
+    h2 {
+      margin-left: 10px;
+      margin-bottom: 42px;
+
+      font-size: 28px;
+    }
+  }
+
+  .products-and-services__item {
+    &:not(:nth-child(3n)) {
+      margin-bottom: 30px;
+    }
+  }
+
+  .products-and-services__link {
+    padding-top: 6.5%;
+    padding-right: 29%;
+    padding-left: 12%;
+
+    &--production {
+      background-size: 156% auto;
+    }
+  }
+}
