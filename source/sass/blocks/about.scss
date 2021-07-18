@@ -80,3 +80,26 @@
   }
 }
 
+@media (max-width: $mobile-max-width) {
+  .about {
+    padding-left: 0;
+
+    &::before {
+      display: none;
+    }
+
+    h2 {
+      margin-bottom: 23px;
+
+      font-size: 28px;
+    }
+
+    p {
+      margin-bottom: 44px;
+
+      &:last-of-type {
+        margin-bottom: 31px;
+      }
+    }
+  }
+}
