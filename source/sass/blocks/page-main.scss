@@ -10,3 +10,8 @@
     background-position: right 23%;
   }
 }
+@media (max-width: $mobile-max-width) {
+  .page-main {
+    background-image: none;
+  }
+}
