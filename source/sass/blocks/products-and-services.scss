@@ -149,3 +149,32 @@
   }
 }
 
+@media (max-width: $mobile-max-width) {
+  .products-and-services {
+    padding-top: 50px;
+    padding-bottom: 64px;
+
+    h2 {
+      margin-left: 10px;
+      margin-bottom: 42px;
+
+      font-size: 28px;
+    }
+  }
+
+  .products-and-services__item {
+    &:not(:nth-child(3n)) {
+      margin-bottom: 30px;
+    }
+  }
+
+  .products-and-services__link {
+    padding-top: 6.5%;
+    padding-right: 29%;
+    padding-left: 12%;
+
+    &--production {
+      background-size: 156% auto;
+    }
+  }
+}
