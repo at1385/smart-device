@@ -111,3 +111,35 @@
   }
 }
 
+@media (max-width: $mobile-max-width) {
+  .features__item {
+    width: 100%;
+
+    &:nth-child(odd) {
+      margin-right: 0;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 8%;
+    }
+
+    padding: 8.3% 8% 9%;
+    padding-right: 5%;
+
+    &--wide-text {
+      padding-right: 4.5%;
+    }
+
+    h3 {
+      font-size: 20px;
+    }
+  }
+
+  .features__icon {
+    margin-bottom: 6px;
+
+    &--confidential {
+      margin-top: 1px;
+    }
+  }
+}
