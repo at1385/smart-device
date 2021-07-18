@@ -4,6 +4,11 @@
   padding: 0 120px;
 }
 
+.container--main {
+  max-width: 1220px;
+  padding: 0 25px;
+}
+
 @media (max-width: $tablet-max-width) {
   .container {
     max-width: $tablet-max-width;
