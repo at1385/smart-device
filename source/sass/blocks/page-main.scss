@@ -1,4 +1,6 @@
 .page-main {
+  padding-top: 113px;
+
   background-image: url("../img/bg-page-main-desktop.svg");
   background-repeat: no-repeat;
   background-position: 50% 33%;
@@ -6,7 +8,17 @@
 
 @media (max-width: $tablet-max-width) {
   .page-main {
+    padding-top: 55px;
+
     background-image: url("../img/bg-page-main-tablet.svg");
     background-position: right 23%;
+  }
+}
+
+@media (max-width: $mobile-max-width) {
+  .page-main {
+    padding-top: 37px;
+
+    background-image: none;
   }
 }
