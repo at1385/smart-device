@@ -1,0 +1,48 @@
+.about {
+  position: relative;
+  width: 100%;
+  padding-left: 180px;
+
+  &::before {
+    content: "2005";
+    position: absolute;
+    top: 48px;
+    left: -98px;
+
+    @include roboto-condensed-700;
+    font-size: 156px;
+    line-height: 1.5;
+    color: transparent;
+
+    background-image: url("../img/bg-decor-year.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-clip: text;
+
+    transform: rotate(-90deg);
+  }
+
+  h2 {
+    margin: 0;
+    margin-bottom: 20px;
+
+    @include roboto-condensed-400;
+    font-size: 36px;
+    line-height: 1.5;
+    color: $dark;
+  }
+
+  p {
+    margin: 0;
+    margin-bottom: 20px;
+
+    &:last-of-type {
+      margin-bottom: 41px;
+    }
+  }
+}
+
+.about__text-overflow {
+  display: none;
+}
+
