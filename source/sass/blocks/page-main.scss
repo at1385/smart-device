@@ -6,12 +6,20 @@
   background-position: 50% 33%;
 }
 
+.page-main__features {
+  margin-bottom: 104px;
+}
+
 @media (max-width: $tablet-max-width) {
   .page-main {
     padding-top: 55px;
 
     background-image: url("../img/bg-page-main-tablet.svg");
     background-position: right 23%;
+  }
+
+  .page-main__features {
+    margin-bottom: 55px;
   }
 }
 
