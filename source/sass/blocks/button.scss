@@ -51,6 +51,32 @@
 
     border-color: transparent;
   }
+
+  &--bright {
+    padding: 13px 49px;
+
+    color: $bright;
+    border-color: $bright;
+
+    &:hover,
+    &:focus {
+      color: $bright;
+
+      background-color: rgba($bright, 0.1);
+
+      border-color: rgba($bright, 0.7);
+      box-shadow: 0 0 5px 1px $bright;
+    }
+
+    &:active {
+      color: rgba($bright, 0.3);
+
+      background-color: rgba($bright, 0.1);
+
+      border-color: transparent;
+      box-shadow: 0 0 5px 1px rgba($bright, 0.3) inset;
+    }
+  }
 }
 
 @media (max-width: $tablet-max-width) {
