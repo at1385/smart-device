@@ -10,6 +10,10 @@
   margin-bottom: 104px;
 }
 
+.page-main__about {
+  margin-bottom: 111px;
+}
+
 @media (max-width: $tablet-max-width) {
   .page-main {
     padding-top: 55px;
@@ -21,6 +25,10 @@
   .page-main__features {
     margin-bottom: 55px;
   }
+
+  .page-main__about {
+    margin-bottom: 83px;
+  }
 }
 
 @media (max-width: $mobile-max-width) {
@@ -28,5 +36,9 @@
     padding-top: 37px;
 
     background-image: none;
+  }
+
+  .page-main__about {
+    margin-bottom:65px;
   }
 }
