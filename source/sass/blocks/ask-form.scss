@@ -159,3 +159,63 @@
   }
 }
 
+@media (max-width: $mobile-max-width) {
+  .ask-form {
+    padding-top: 30px;
+    padding-bottom: 41px;
+
+    h2 {
+      margin-bottom: 13px;
+
+      font-size: 28px;
+    }
+
+    p {
+      margin-bottom: 27px;
+    }
+  }
+
+  .ask-form__content-wrapper {
+    width: 100%;
+  }
+
+  .ask-form__columns-wrapper {
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  .ask-form__column {
+    width: 100%;
+
+    &:nth-child(odd) {
+      margin-right: 0;
+    }
+
+    &--checkbox {
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+  }
+
+  .ask-form__submit {
+    width: 290px;
+    margin-bottom: 31px;
+  }
+
+  .ask-form__field {
+    margin-bottom: 29px;
+
+    &--textarea {
+      height: 104px;
+    }
+  }
+
+  .ask-form__checkbox + .ask-form__label {
+    padding-left: 34px;
+
+    &::before {
+      top: 1px;
+      left: 0px;
+    }
+  }
+}
