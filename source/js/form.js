@@ -75,7 +75,7 @@
     addFormElementFocus(askFormCheckboxes[j], 'ask-form__label--invalid', askFormLabels[j]);
   }
 
-  askFormSubmit.addEventListener('click', function (evt) {
+  askFormSubmit.addEventListener('click', function () {
     for (var k = 0; k < askFormFields.length; k++) {
       setInvalidStyle(askFormFields[k], 'ask-form__field--invalid');
     }
