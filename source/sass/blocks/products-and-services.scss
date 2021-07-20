@@ -65,17 +65,17 @@
 
     &:hover,
     &:focus {
-        background-image: url("../img/bg-products-board-mount.png");
+      background-image: url("../img/bg-products-board-mount.png");
     }
   }
 
   &--led {
-    background-image: url("../img/bg-products-led-dim.png");;
+    background-image: url("../img/bg-products-led-dim.png");
     background-size: 620px auto;
 
     &:hover,
     &:focus {
-        background-image: url("../img/bg-products-led.png");
+      background-image: url("../img/bg-products-led.png");
     }
   }
 
