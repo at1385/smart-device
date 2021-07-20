@@ -128,3 +128,34 @@
   }
 }
 
+@media (max-width: $tablet-max-width) {
+  .ask-form {
+    padding-top: 79px;
+    padding-bottom: 103px;
+
+    background-image: none;
+
+    h2 {
+      margin-bottom: 17px;
+
+      font-size: 32px;
+    }
+  }
+
+  .ask-form__wrapper {
+    justify-content: center;
+  }
+
+  .ask-form__content-wrapper {
+    width: 82.5%;
+  }
+
+  .ask-form__field {
+    height: 52px;
+
+    &--textarea {
+      height: 166px;
+    }
+  }
+}
+
