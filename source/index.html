@@ -160,8 +160,43 @@
           </ul>
         </div>
       </section>
+
+      <form class="ask-form" id="ask-form" action="https://echo.htmlacademy.ru/" method="POST">
+        <div class="ask-form__wrapper container container--main">
+          <div class="ask-form__content-wrapper">
+            <h2>Остались вопросы? Задайте их нам!</h2>
+
+            <p>Мы проконсультируем Вас бесплатно</p>
+
+            <div class="ask-form__columns-wrapper">
+              <div class="ask-form__column">
+                <label class="visually-hidden" for="ask-form-customer-name">Имя</label>
+                <input class="ask-form__field" id="ask-form-customer-name" type="text" name="ask-form-customer-name" placeholder="Имя" required>
+              </div>
+
+              <div class="ask-form__column">
+                <label class="visually-hidden" for="ask-form-customer-tel">Телефон</label>
+                <input class="ask-form__field" id="ask-form-customer-tel" type="tel" name="ask-form-customer-tel" placeholder="Телефон" required>
+              </div>
+            </div>
+
+            <label class="visually-hidden" for="ask-form-customer-question">Ваш вопрос</label>
+            <textarea class="ask-form__field ask-form__field--textarea" name="ask-form-customer-question" id="ask-form-customer-question" cols="30" rows="5" placeholder="Ваш вопрос" required></textarea>
+
+            <div class="ask-form__columns-wrapper">
+              <button class="ask-form__column ask-form__submit button" type="submit">Задать вопрос</button>
+
+              <div class="ask-form__column ask-form__column--checkbox">
+                <input class="ask-form__checkbox visually-hidden" id="ask-form-personal-data-consent" type="checkbox" checked required>
+                <label class="ask-form__label" for="ask-form-personal-data-consent">Я согласен на обработку персональных данных</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
     </main>
 
+    <script src="js/vendor.js"></script>
     <script src="js/main.js"></script>
   </body>
 
