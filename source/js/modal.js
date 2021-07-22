@@ -22,6 +22,8 @@
       askModal.classList.remove('ask-form--hidden');
       overlay.classList.remove('overlay--hidden');
 
+      askModalCustomerName.focus();
+
       document.addEventListener('keydown', onEscPress);
       overlay.addEventListener('click', closeAskModal);
     }
