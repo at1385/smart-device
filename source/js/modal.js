@@ -33,10 +33,29 @@
     }
   }
 
+  function existVerticalScroll() {
+    return document.body.offsetHeight > window.innerHeight;
+  }
+
+  function getBodyScrollTop() {
+    return (
+      self.pageYOffset ||
+      (document.documentElement && document.documentElement.ScrollTop) ||
+      (document.body && document.body.scrollTop)
+    );
+  }
+
   function openAskModal() {
     if (askModal && overlay) {
       askModal.classList.remove('ask-form--hidden');
       overlay.classList.remove('overlay--hidden');
+
+      body.dataset.scrollY = getBodyScrollTop();
+
+      if (existVerticalScroll()) {
+        body.classList.add('body-lock');
+        body.style.top = '-' + body.dataset.scrollY + 'px';
+      }
 
       askModalCustomerName.focus();
 
@@ -66,6 +85,11 @@
 
     askModal.classList.add('ask-form--hidden');
     overlay.classList.add('overlay--hidden');
+
+    if (existVerticalScroll()) {
+      body.classList.remove('body-lock');
+      window.scrollTo(0, +body.dataset.scrollY);
+    }
 
     document.removeEventListener('keydown', onEscPress);
     overlay.removeEventListener('click', closeAskModal);
