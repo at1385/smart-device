@@ -9,6 +9,8 @@ html {
 }
 
 body {
+  position: relative;
+
   display: grid;
   grid-template-rows: auto 1fr auto;
   min-width: $mobile-min-width;

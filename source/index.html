@@ -47,7 +47,7 @@
           </li>
         </ul>
 
-        <a class="page-header__button button" href="modal-call.html">Заказать звонок</a>
+        <a class="page-header__modal-open button" href="modal.html">Заказать звонок</a>
       </div>
 
       <h1 class="visually-hidden">Компания умных технологий «Smart Device»</h1>
@@ -176,12 +176,13 @@
 
               <div class="ask-form__column">
                 <label class="visually-hidden" for="ask-form-customer-tel">Телефон</label>
-                <input class="ask-form__field" id="ask-form-customer-tel" type="tel" name="ask-form-customer-tel" placeholder="Телефон" required>
+                <input class="ask-form__field phone-field" id="ask-form-customer-tel" type="tel" name="ask-form-customer-tel" placeholder="Телефон" required>
               </div>
             </div>
 
             <label class="visually-hidden" for="ask-form-customer-question">Ваш вопрос</label>
-            <textarea class="ask-form__field ask-form__field--textarea" name="ask-form-customer-question" id="ask-form-customer-question" cols="30" rows="5" placeholder="Ваш вопрос" required></textarea>
+            <textarea class="ask-form__field ask-form__field--textarea" name="ask-form-customer-question" id="ask-form-customer-question" cols="30" rows="5"
+              placeholder="Ваш вопрос" required></textarea>
 
             <div class="ask-form__columns-wrapper">
               <button class="ask-form__column ask-form__submit button" type="submit">Задать вопрос</button>
@@ -195,6 +196,41 @@
         </div>
       </form>
     </main>
+
+    <div class="overlay overlay--hidden"></div>
+
+    <form class="ask-form ask-form--modal ask-form--hidden" id="ask-modal" action="https://echo.htmlacademy.ru/" method="POST">
+      <h2>Закажите звонок</h2>
+
+      <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
+
+      <button class="ask-form__modal-close" type="button">
+        <span class="visually-hidden">Закрыть окно</span>
+      </button>
+
+      <div class="ask-form__column">
+        <label class="visually-hidden" for="ask-modal-customer-name">Имя</label>
+        <input class="ask-form__field" id="ask-modal-customer-name" type="text" name="ask-modal-customer-name" placeholder="Имя" required>
+      </div>
+
+      <div class="ask-form__column">
+        <label class="visually-hidden" for="ask-modal-customer-tel">Телефон</label>
+        <input class="ask-form__field phone-field" id="ask-modal-customer-tel" type="tel" name="ask-modal-customer-tel" placeholder="Телефон" required>
+      </div>
+
+      <div class="ask-form__column">
+        <label class="visually-hidden" for="ask-modal-customer-question">Ваш вопрос</label>
+        <textarea class="ask-form__field ask-form__field--textarea" name="ask-modal-customer-question" id="ask-modal-customer-question" cols="30" rows="5" placeholder="Ваш вопрос"
+          required></textarea>
+      </div>
+
+      <button class="ask-form__column ask-form__submit button" type="submit">Отправить</button>
+
+      <div class="ask-form__column ask-form__column--checkbox">
+        <input class="ask-form__checkbox visually-hidden" id="ask-modal-personal-data-consent" name="ask-modal-personal-data-consent" type="checkbox" checked required>
+        <label class="ask-form__label" for="ask-modal-personal-data-consent">Я согласен на обработку персональных данных</label>
+      </div>
+    </form>
 
     <script src="js/vendor.js"></script>
     <script src="js/main.js"></script>

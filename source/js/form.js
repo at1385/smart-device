@@ -3,28 +3,35 @@
 (function () {
   var PHONE_LENGTH = 17;
 
-  var askForm = document.querySelector('#ask-form');
-  var askFormFields = askForm.querySelectorAll('.ask-form__field');
-  var askFormCheckboxes = askForm.querySelectorAll('.ask-form__checkbox');
-  var askFormLabels = askForm.querySelectorAll('.ask-form__label');
-  var askFormPhone = askForm.querySelector('#ask-form-customer-tel');
-  var askFormSubmit = askForm.querySelector('.ask-form__submit');
+  var askFormFields = document.querySelectorAll('.ask-form__field');
+  var askFormCheckboxes = document.querySelectorAll('.ask-form__checkbox');
+  var askFormLabels = document.querySelectorAll('.ask-form__label');
+  var askFormPhones = document.querySelectorAll('.phone-field');
+  var askFormSubmits = document.querySelectorAll('.ask-form__submit');
 
   // маска телефона
   window.$(document).ready(function () {
-    window.$('#ask-form-customer-tel').mask('+7 (000) 000 00 00');
+    window.$('.phone-field').mask('+7 (000) 000 00 00');
   });
 
   // Проверка длины номера телефона
-  askFormPhone.addEventListener('input', function () {
-    if (askFormPhone.value.length < PHONE_LENGTH) {
-      askFormPhone.setCustomValidity('+7 (XXX) XXX XX XX');
-    } else {
-      askFormPhone.setCustomValidity('');
-    }
+  function addPhoneFieldInputEvent(phoneField) {
+    phoneField.addEventListener('input', function () {
+      if (phoneField.value.length < PHONE_LENGTH) {
+        phoneField.setCustomValidity('+7 (XXX) XXX XX XX');
+      } else {
+        phoneField.setCustomValidity('');
+      }
 
-    askFormPhone.reportValidity();
-  });
+      phoneField.reportValidity();
+    });
+  }
+
+  if (askFormPhones) {
+    for (var m = 0; m < askFormPhones.length; m++) {
+      addPhoneFieldInputEvent(askFormPhones[m]);
+    }
+  }
 
   // функции добавления/удаления класса стилей
   function addClass(styleClass, targetElement) {
@@ -61,27 +68,40 @@
   }
 
   // добавление обработчиков события 'focus' элементам формы, для удаления класса стилей невалидного элемента
-  function addFormElementFocus(formElement, styleClass, targetElement) {
+  function addFormElementFocusEvent(formElement, styleClass, targetElement) {
     formElement.addEventListener('focus', function () {
       removeInvalidStyle(formElement, styleClass, targetElement);
     });
   }
 
-  for (var i = 0; i < askFormFields.length; i++) {
-    addFormElementFocus(askFormFields[i], 'ask-form__field--invalid');
+  if (askFormFields) {
+    for (var i = 0; i < askFormFields.length; i++) {
+      addFormElementFocusEvent(askFormFields[i], 'ask-form__field--invalid');
+    }
   }
 
-  for (var j = 0; j < askFormCheckboxes.length; j++) {
-    addFormElementFocus(askFormCheckboxes[j], 'ask-form__label--invalid', askFormLabels[j]);
+  if (askFormCheckboxes) {
+    for (var j = 0; j < askFormCheckboxes.length; j++) {
+      addFormElementFocusEvent(askFormCheckboxes[j], 'ask-form__label--invalid', askFormLabels[j]);
+    }
   }
 
-  askFormSubmit.addEventListener('click', function () {
-    for (var k = 0; k < askFormFields.length; k++) {
-      setInvalidStyle(askFormFields[k], 'ask-form__field--invalid');
-    }
+  // добавление обработчиков события 'click' кнопке отправки формы, для добавления класса стилей невалидного элемента
+  function addFormSubmitClickEvent(askFormSubmit, formFields, formCheckboxes, styleClassFields, styleClassLabels, targetElements) {
+    askFormSubmit.addEventListener('click', function () {
+      for (var k = 0; k < formFields.length; k++) {
+        setInvalidStyle(formFields[k], styleClassFields);
+      }
 
-    for (var l = 0; l < askFormCheckboxes.length; l++) {
-      setInvalidStyle(askFormCheckboxes[l], 'ask-form__label--invalid', askFormLabels[l]);
+      for (var l = 0; l < formCheckboxes.length; l++) {
+        setInvalidStyle(formCheckboxes[l], styleClassLabels, targetElements[l]);
+      }
+    });
+  }
+
+  if (askFormSubmits && askFormFields && askFormCheckboxes && askFormLabels) {
+    for (var n = 0; n < askFormSubmits.length; n++) {
+      addFormSubmitClickEvent(askFormSubmits[n], askFormFields, askFormCheckboxes, 'ask-form__field--invalid', 'ask-form__label--invalid', askFormLabels);
     }
-  });
+  }
 })();
