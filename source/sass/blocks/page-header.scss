@@ -67,6 +67,10 @@
     padding-bottom: 9px;
 
     background-position: 57% -4px;
+
+    &--modal {
+      padding-bottom: 16px;
+    }
   }
 
   .page-header__wrapper {
@@ -74,5 +78,9 @@
     min-width: 290px;
     max-width: 630px;
     margin-bottom: 15px;
+
+    &--modal {
+      margin-bottom: 0;
+    }
   }
 }
