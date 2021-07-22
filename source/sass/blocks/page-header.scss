@@ -37,18 +37,26 @@
     padding-bottom: 53px;
 
     background-position: center -6px;
+
+    &--modal {
+      padding-bottom: 20px;
+    }
   }
 
   .page-header__wrapper {
     grid-template-columns: 202px 1fr;
     margin-bottom: 10px;
+
+    &--modal {
+      margin-bottom: 0;
+    }
   }
 
   .page-header__contacts {
     margin-bottom: 3px;
   }
 
-  .page-header__button {
+  .page-header__modal-open {
     display: none;
   }
 }
