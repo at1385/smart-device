@@ -11,6 +11,10 @@
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/bg-page-header@2x.png");
   }
+
+  &--modal {
+    padding-bottom: 33px;
+  }
 }
 
 .page-header__wrapper {
@@ -20,6 +24,11 @@
   justify-items: end;
   align-items: center;
   margin-bottom: 173px;
+
+  &--modal {
+    grid-template-columns: 202px 1fr;
+    margin-bottom: 0;
+  }
 }
 
 @media (max-width: $tablet-max-width) {
