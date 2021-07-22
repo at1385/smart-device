@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preload" href="fonts/roboto-condensed-400.woff2" as="font">
+    <link rel="preload" href="fonts/pt-mono-400.woff2" as="font">
+    <title>«Smart Device» - Умные Технологии</title>
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+
+  <body>
+    <div style="display: none;">
+      <include src="build/img/sprite.svg"></include>
+    </div>
+
+    <header class="page-header page-header--modal">
+      <div class="page-header__wrapper page-header__wrapper--modal container">
+        <a class="site-logo" href="index.html">
+          <svg class="site-logo__icon" width="52" height="52">
+            <use xlink:href="#inline-logo-site-icon"></use>
+          </svg>
+
+          <svg class="site-logo__name" width="134" height="45">
+            <use xlink:href="#inline-logo-site-name-light"></use>
+          </svg>
+        </a>
+
+        <ul class="page-header__contacts contacts">
+          <li class="contacts__item">
+            <a href="mailto:info@sd.ru">
+              <svg class="contacts__email-icon" width="19" height="14">
+                <use xlink:href="#inline-contacts-email"></use>
+              </svg>
+              <span>info@sd.ru</span>
+            </a>
+          </li>
+          <li class="contacts__item">
+            <a href="tel:+74950005252">
+              <svg class="contacts__phone-icon" width="18" height="18">
+                <use xlink:href="#inline-contacts-phone"></use>
+              </svg>
+              <span>+7 (495) 000 52 52</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <main class="page-main page-main--modal">
+      <form class="ask-form ask-form--modal ask-form--page" id="ask-form" action="https://echo.htmlacademy.ru/" method="POST">
+        <h2>Закажите звонок</h2>
+
+        <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
+
+        <div class="ask-form__column">
+          <label class="visually-hidden" for="ask-modal-customer-name">Имя</label>
+          <input class="ask-form__field" id="ask-modal-customer-name" type="text" name="ask-modal-customer-name" placeholder="Имя" required>
+        </div>
+
+        <div class="ask-form__column">
+          <label class="visually-hidden" for="ask-modal-customer-tel">Телефон</label>
+          <input class="ask-form__field phone-field" id="ask-modal-customer-tel" type="tel" name="ask-modal-customer-tel" placeholder="Телефон" required>
+        </div>
+
+        <div class="ask-form__column">
+          <label class="visually-hidden" for="ask-modal-customer-question">Ваш вопрос</label>
+          <textarea class="ask-form__field ask-form__field--textarea" name="ask-modal-customer-question" id="ask-modal-customer-question" cols="30" rows="5" placeholder="Ваш вопрос"
+            required></textarea>
+        </div>
+
+        <button class="ask-form__column ask-form__submit button" type="submit">Отправить</button>
+
+        <div class="ask-form__column ask-form__column--checkbox">
+          <input class="ask-form__checkbox visually-hidden" id="ask-form-personal-data-consent" type="checkbox" checked required>
+          <label class="ask-form__label" for="ask-form-personal-data-consent">Я согласен на обработку персональных данных</label>
+        </div>
+      </form>
+    </main>
+
+    <script src="js/vendor.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+
+</html>
