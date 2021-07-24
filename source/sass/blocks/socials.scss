@@ -27,3 +27,14 @@
   }
 }
 
+@media (max-width: $tablet-max-width) {
+  .socials {
+    width: 112px;
+  }
+
+  .socials__item {
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+}

@@ -48,3 +48,18 @@
   }
 }
 
+@media (max-width: $tablet-max-width) {
+  .accordion {
+    border-top: 1px solid rgba($darkest, 0.2);
+    border-bottom: 1px solid rgba($darkest, 0.2);
+  }
+
+  .accordion__links {
+    margin-bottom: 33px;
+
+    &--columns {
+      column-count: 1;
+    }
+  }
+}
+
