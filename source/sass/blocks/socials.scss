@@ -1,0 +1,29 @@
+.socials {
+  @include list-reset;
+
+  display: flex;
+  flex-wrap: wrap;
+  width: 115px;
+}
+
+.socials__item {
+  &:not(:nth-child(3n)) {
+    margin-right: 15px;
+  }
+}
+
+.socials__link {
+  fill: rgba($dark, 0.5);
+
+  outline: none;
+
+  &:hover,
+  &:focus {
+    fill: $bright;
+  }
+
+  &:active {
+    fill: rgba($bright, 0.3);
+  }
+}
+

@@ -1,0 +1,50 @@
+.accordion {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  font-size: 15px;
+  line-height: 1.7;
+
+  h2 {
+    margin: 0;
+    margin-bottom: 25px;
+
+    @include roboto-condensed-400;
+    font-size: 15px;
+    line-height: 1;
+    letter-spacing: 0.05em;
+    color: $darkest;
+    text-transform: uppercase;
+
+    outline: none;
+  }
+
+  address {
+    font-style: normal;
+  }
+}
+
+.accordion__links {
+  @include list-reset;
+  margin-bottom: 40px;
+
+  &--columns {
+    column-count: 2;
+    column-gap: 72px;
+  }
+
+  a {
+    color: rgba($darkest, 0.5);
+
+    &:hover,
+    &:focus {
+      color: rgba($darkest, 0.8);
+    }
+
+    &:active {
+      color: rgba($darkest, 0.2);
+    }
+  }
+}
+
