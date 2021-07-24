@@ -1,0 +1,151 @@
+.accordion {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  font-size: 15px;
+  line-height: 1.7;
+
+  h2 {
+    margin: 0;
+    margin-bottom: 25px;
+
+    @include roboto-condensed-400;
+    font-size: 15px;
+    line-height: 1;
+    letter-spacing: 0.05em;
+    color: $darkest;
+    text-transform: uppercase;
+
+    outline: none;
+  }
+
+  address {
+    font-style: normal;
+  }
+}
+
+.accordion__links {
+  @include list-reset;
+  margin-bottom: 40px;
+
+  &--columns {
+    column-count: 2;
+    column-gap: 72px;
+  }
+
+  a {
+    color: rgba($darkest, 0.5);
+
+    &:hover,
+    &:focus {
+      color: rgba($darkest, 0.8);
+    }
+
+    &:active {
+      color: rgba($darkest, 0.2);
+    }
+  }
+}
+
+@media (max-width: $tablet-max-width) {
+  .accordion {
+    border-top: 1px solid rgba($darkest, 0.2);
+    border-bottom: 1px solid rgba($darkest, 0.2);
+  }
+
+  .accordion__links {
+    margin-bottom: 33px;
+
+    &--columns {
+      column-count: 1;
+    }
+  }
+}
+
+@media (max-width: $mobile-max-width) {
+  .accordion {
+    h2 {
+      position: relative;
+
+      margin-bottom: 0;
+      padding: 30px 15px 27px;
+    }
+
+    &--js {
+      h2 {
+        cursor: pointer;
+
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          right: 16px;
+
+          width: 16px;
+          height: 1px;
+
+          background-color: rgba($darkest, 0.3);
+        }
+
+        &::after {
+          transform: rotate(90deg);
+        }
+
+        &:hover,
+        &:focus {
+          background-color: $lightest;
+
+          &::before,
+          &::after {
+            background-color: $darkest;
+          }
+        }
+
+        &:focus {
+          outline: 1px dotted rgba($darkest, 0.5);
+          outline-offset: -5px;
+        }
+
+        &:active {
+          color: rgba($darkest, 0.2);
+
+          outline: none;
+
+          &::before,
+          &::after {
+            background-color: rgba($darkest, 0.2);
+          }
+        }
+      }
+
+      .accordion__links {
+        display: none;
+
+        &--opened {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .accordion__opened-item {
+    &::after {
+      display: none;
+    }
+  }
+
+  .accordion__item {
+    width: 100%;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid rgba($darkest, 0.2);
+    }
+  }
+
+  .accordion__links {
+    margin-bottom: 0;
+    padding: 4px 18px 24px 15px;
+  }
+}
