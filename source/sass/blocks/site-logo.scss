@@ -17,6 +17,19 @@
   .site-logo {
     width: 38px;
     height: 38px;
+
+    &--footer {
+      width: 202px;
+      height: 52px;
+
+      .site-logo__icon {
+        margin-right: 16px;
+      }
+
+      .site-logo__name {
+        display: block;
+      }
+    }
   }
 
   .site-logo__icon {
