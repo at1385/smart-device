@@ -1,7 +1,7 @@
 'use strict';
 
 (function () {
-  var PHONE_LENGTH = 17;
+  var PHONE_LENGTH = 18;
 
   var askFormFields = document.querySelectorAll('.ask-form__field');
   var askFormCheckboxes = document.querySelectorAll('.ask-form__checkbox');
@@ -15,22 +15,22 @@
   });
 
   // Проверка длины номера телефона
-  function addPhoneFieldInputEvent(phoneField) {
-    phoneField.addEventListener('input', function () {
-      if (phoneField.value.length < PHONE_LENGTH) {
-        phoneField.setCustomValidity('+7 (XXX) XXX XX XX');
-      } else {
-        phoneField.setCustomValidity('');
-      }
+  function checkPhoneLength(phoneField) {
+    if (phoneField.value.length < PHONE_LENGTH) {
+      phoneField.setCustomValidity('+7 (XXX) XXX XX XX');
+    } else {
+      phoneField.setCustomValidity('');
+    }
 
-      phoneField.reportValidity();
-    });
+    phoneField.reportValidity();
   }
 
   if (askFormPhones) {
-    for (var m = 0; m < askFormPhones.length; m++) {
-      addPhoneFieldInputEvent(askFormPhones[m]);
-    }
+    askFormPhones.forEach(function (item) {
+      item.addEventListener('input', function () {
+        checkPhoneLength(item);
+      });
+    });
   }
 
   // функции добавления/удаления класса стилей
@@ -68,40 +68,34 @@
   }
 
   // добавление обработчиков события 'focus' элементам формы, для удаления класса стилей невалидного элемента
-  function addFormElementFocusEvent(formElement, styleClass, targetElement) {
-    formElement.addEventListener('focus', function () {
-      removeInvalidStyle(formElement, styleClass, targetElement);
-    });
-  }
-
   if (askFormFields) {
-    for (var i = 0; i < askFormFields.length; i++) {
-      addFormElementFocusEvent(askFormFields[i], 'ask-form__field--invalid');
-    }
+    askFormFields.forEach(function (item) {
+      item.addEventListener('focus', function () {
+        removeInvalidStyle(item, 'ask-form__field--invalid');
+      });
+    });
   }
 
   if (askFormCheckboxes) {
-    for (var j = 0; j < askFormCheckboxes.length; j++) {
-      addFormElementFocusEvent(askFormCheckboxes[j], 'ask-form__label--invalid', askFormLabels[j]);
-    }
-  }
-
-  // добавление обработчиков события 'click' кнопке отправки формы, для добавления класса стилей невалидного элемента
-  function addFormSubmitClickEvent(askFormSubmit, formFields, formCheckboxes, styleClassFields, styleClassLabels, targetElements) {
-    askFormSubmit.addEventListener('click', function () {
-      for (var k = 0; k < formFields.length; k++) {
-        setInvalidStyle(formFields[k], styleClassFields);
-      }
-
-      for (var l = 0; l < formCheckboxes.length; l++) {
-        setInvalidStyle(formCheckboxes[l], styleClassLabels, targetElements[l]);
-      }
+    askFormCheckboxes.forEach(function (item, index) {
+      item.addEventListener('focus', function () {
+        removeInvalidStyle(item, 'ask-form__label--invalid', askFormLabels[index]);
+      });
     });
   }
 
+  // добавление невалидным элементам класса стилей невалидного элемента формы при её отправке
   if (askFormSubmits && askFormFields && askFormCheckboxes && askFormLabels) {
-    for (var n = 0; n < askFormSubmits.length; n++) {
-      addFormSubmitClickEvent(askFormSubmits[n], askFormFields, askFormCheckboxes, 'ask-form__field--invalid', 'ask-form__label--invalid', askFormLabels);
-    }
+    askFormSubmits.forEach(function (item) {
+      item.addEventListener('click', function () {
+        for (var i = 0; i < askFormFields.length; i++) {
+          setInvalidStyle(askFormFields[i], 'ask-form__field--invalid');
+        }
+
+        for (var j = 0; j < askFormCheckboxes.length; j++) {
+          setInvalidStyle(askFormCheckboxes[j], 'ask-form__label--invalid', askFormLabels[j]);
+        }
+      });
+    });
   }
 })();
