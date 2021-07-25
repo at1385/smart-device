@@ -19,6 +19,10 @@
     background-position: center;
     background-clip: text;
 
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-decor-year@2x.jpg");
+    }
+
     transform: rotate(-90deg);
   }
 

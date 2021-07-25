@@ -11,6 +11,10 @@
   background-repeat: no-repeat;
   background-position: center top;
 
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/bg-ask-form@2x.png");
+  }
+
   h2 {
     margin: 0;
     margin-bottom: 11px;
