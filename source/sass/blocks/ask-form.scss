@@ -151,7 +151,7 @@
 .ask-form__field {
   width: 100%;
   height: 50px;
-  margin-bottom: 40px;
+  margin-bottom: 39px;
   padding: 13px 20px;
 
   font: inherit;
@@ -225,7 +225,7 @@
 @media (max-width: $tablet-max-width) {
   .ask-form {
     padding-top: 79px;
-    padding-bottom: 104px;
+    padding-bottom: 103px;
 
     background-image: none;
 
@@ -317,7 +317,7 @@
   }
 
   .ask-form__field {
-    margin-bottom: 29px;
+    margin-bottom: 28px;
 
     &--textarea {
       height: 104px;

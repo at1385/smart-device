@@ -4,11 +4,11 @@
   justify-content: space-between;
 
   font-size: 15px;
-  line-height: 1.7;
+  line-height: 25px;
 
   h2 {
     margin: 0;
-    margin-bottom: 25px;
+    margin-bottom: 26px;
 
     @include roboto-condensed-400;
     font-size: 15px;
@@ -55,7 +55,7 @@
   }
 
   .accordion__links {
-    margin-bottom: 33px;
+    margin-bottom: 34px;
 
     &--columns {
       column-count: 1;
