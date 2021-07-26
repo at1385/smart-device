@@ -1,29 +1,16 @@
 .about {
   position: relative;
   width: 100%;
+  padding-bottom: 9px;
   padding-left: 180px;
 
-  &::before {
-    content: "2005";
-    position: absolute;
-    top: 48px;
-    left: -98px;
+  background-image: url("../img/bg-decor-year.png");
+  background-repeat: no-repeat;
+  background-position: 2px 14px;
+  background-size: 115px auto;
 
-    @include roboto-condensed-700;
-    font-size: 156px;
-    line-height: 1.5;
-    color: transparent;
-
-    background-image: url("../img/bg-decor-year.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-clip: text;
-
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/bg-decor-year@2x.jpg");
-    }
-
-    transform: rotate(-90deg);
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/bg-decor-year@2x.png");
   }
 
   h2 {
@@ -53,13 +40,11 @@
 
 @media (max-width: $tablet-max-width) {
   .about {
+    padding-bottom: 0;
     padding-left: 185px;
 
-    &::before {
-      left: -110px;
-
-      font-size: 178px;
-    }
+    background-position: 2px 6px;
+    background-size: 131px auto;
 
     h2 {
       margin-bottom: 23px;
@@ -90,9 +75,7 @@
   .about {
     padding-left: 0;
 
-    &::before {
-      display: none;
-    }
+    background-image: none;
 
     h2 {
       margin-bottom: 19px;
