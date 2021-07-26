@@ -72,8 +72,8 @@
     background-size: 1012px auto;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-        background-image: url("../img/bg-products-board-mount-dim@2x.png");
-      }
+      background-image: url("../img/bg-products-board-mount-dim@2x.png");
+    }
 
     &:hover,
     &:focus {
@@ -90,8 +90,8 @@
     background-size: 620px auto;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-        background-image: url("../img/bg-products-led-dim@2x.png");
-      }
+      background-image: url("../img/bg-products-led-dim@2x.png");
+    }
 
     &:hover,
     &:focus {
