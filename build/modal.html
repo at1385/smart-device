@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="Компания умных технологий «Smart Device»: производство и монтаж, поставка комплектующих, блоков и модулей">
+    <meta name="description" content="Форма обратной связи компании «Smart Device»: заказ бесплатной констультации по возникшим вопросам в удобное для Вас время">
     <link rel="preload" href="fonts/roboto-condensed-400.woff2" as="font">
     <link rel="preload" href="fonts/pt-mono-400.woff2" as="font">
-    <title>«Smart Device» - Умные Технологии</title>
+    <title>«Smart Device» - Обратная связь</title>
     <link rel="stylesheet" href="css/style.min.css">
   </head>
 
@@ -70,9 +70,9 @@
 </symbol></svg>
     </div>
 
-    <header class="page-header">
-      <div class="page-header__wrapper container">
-        <a class="site-logo">
+    <header class="page-header page-header--modal">
+      <div class="page-header__wrapper page-header__wrapper--modal container">
+        <a class="site-logo" href="index.html">
           <svg class="site-logo__icon" width="52" height="52">
             <use xlink:href="#inline-logo-site-icon"></use>
           </svg>
@@ -100,151 +100,37 @@
             </a>
           </li>
         </ul>
-
-        <a class="page-header__modal-open button" href="modal.html">Заказать звонок</a>
       </div>
-
-      <h1 class="visually-hidden">Компания умных технологий «Smart Device»</h1>
-
-      <section class="page-header__promo promo">
-        <div class="promo__wrapper container">
-          <h2>Печатные платы</h2>
-
-          <div class="promo__left-column">
-            <p>Производство и монтаж, поставка комплектующих, блоков и модулей</p>
-
-            <a class="promo__button button button--filled button--large" href="#ask-form">
-              <span class="promo__button-desktop-label">Получить бесплатную консультацию</span>
-              <span class="promo__button-mobile-label">Бесплатная консультация</span>
-            </a>
-
-            <a class="promo__scroll-link" href="#features">Скролл вниз</a>
-          </div>
-
-          <div class="promo__image">
-            <picture>
-              <source type="image/webp" srcset="img/content-board.webp 1x, img/content-board@2x.webp 2x">
-              <!-- 1х: 705px; 2x: 1410px -->
-              <img src="img/content-board.png" srcset="img/content-board@2x.png 2x" width="705" height="515" alt="Печатная плата производства Smart Device">
-            </picture>
-          </div>
-        </div>
-      </section>
     </header>
 
-    <main class="page-main">
-      <div class="page-main__wrapper container container--main">
-        <section class="page-main__features features" id="features">
-          <h2 class="visually-hidden">Преимущества компании</h2>
+    <main class="page-main page-main--modal">
+      <h1 class="visually-hidden">Обратная связь</h1>
 
-          <ul class="features__list">
-            <li class="features__item">
-              <svg class="features__icon" width="29" height="35">
-                <use xlink:href="#inline-features-efficiency"></use>
-              </svg>
+      <form class="ask-form ask-form--modal ask-form--page" id="ask-form" action="https://echo.htmlacademy.ru/" method="POST">
+        <h2>Закажите звонок</h2>
 
-              <h3>Оперативные сроки</h3>
-              <p>
-                Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и доставлять заказы плат и комплектующих в&nbsp;самые короткие сроки
-              </p>
-            </li>
+        <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
 
-            <li class="features__item features__item--wide-text">
-              <svg class="features__icon features__icon--provider" width="35" height="35">
-                <use xlink:href="#inline-features-provider"></use>
-              </svg>
-
-              <h3>Крупные поставщики</h3>
-              <p>
-                Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND. Сотрудничество с такими компаниями обеспичивает хорошее
-                качество нашей продукции.
-              </p>
-            </li>
-
-            <li class="features__item">
-              <svg class="features__icon features__icon--confidential" width="36" height="31">
-                <use xlink:href="#inline-features-confidential"></use>
-              </svg>
-
-              <h3>Полная конфиденциальность</h3>
-              <p>По&nbsp;желанию клиента мы обеспечиваем полную конфеденциальность.</p>
-            </li>
-
-            <li class="features__item">
-              <svg class="features__icon features__icon--price" width="35" height="35">
-                <use xlink:href="#inline-features-price"></use>
-              </svg>
-
-              <h3>Персонализация стоимости</h3>
-              <p>Мы&nbsp;подбираем определенную фабрику, поставщиков, вид доставки, чтобы установить ту цену, которая Вас устраивает.</p>
-            </li>
-          </ul>
-        </section>
-
-        <section class="page-main__about about">
-          <h2>О компании</h2>
-
-          <p>
-            Мы&nbsp;поставляем электронные комплектующие, производим печатные платы и&nbsp;предоставляем мировые технологии с 1997 года. Выполняем срочные заказы
-            и&nbsp;пилотные образцы до&nbsp;10 дней.
-          </p>
-          <p>
-            Наши поставщики&nbsp;&mdash; мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные платы и&nbsp;комплектующие Service Devices
-            применяются на предприятиях Российских Железных Дорог<span class="about__text-overflow">..</span> <span class="about__hidden-text">(РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ),
-              МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</span>
-          </p>
-
-          <a class="button button--bright" href="#">Подробнее</a>
-        </section>
-      </div>
-
-      <section class="products-and-services">
-        <div class="page-main__products-and-services container container--main">
-          <h2>Service Device предлагает следующие товары и&nbsp;услуги</h2>
-
-          <ul class="products-and-services__list">
-            <li class="products-and-services__item">
-              <a class="products-and-services__link products-and-services__link--production" href="#">Производство печатных плат</a>
-            </li>
-            <li class="products-and-services__item">
-              <a class="products-and-services__link products-and-services__link--mounting" href="#">Монтаж печатных плат</a>
-            </li>
-            <li class="products-and-services__item">
-              <a class="products-and-services__link products-and-services__link--led" href="#">Комплектующие для светотехники</a>
-            </li>
-          </ul>
+        <div class="ask-form__field ask-form__personal-data">
+          <label class="visually-hidden" for="ask-modal-customer-name">Имя</label>
+          <input id="ask-modal-customer-name" type="text" name="ask-modal-customer-name" placeholder="Имя" required="">
         </div>
-      </section>
 
-      <form class="ask-form" id="ask-form" action="https://echo.htmlacademy.ru/" method="POST">
-        <div class="ask-form__wrapper container container--main">
-          <div class="ask-form__content-wrapper">
-            <h2>Остались вопросы? Задайте их нам!</h2>
+        <div class="ask-form__field ask-form__personal-data ask-form__phone">
+          <label class="visually-hidden" for="ask-modal-customer-tel">Телефон</label>
+          <input id="ask-modal-customer-tel" type="tel" name="ask-modal-customer-tel" placeholder="Телефон" required="">
+        </div>
 
-            <p>Мы проконсультируем Вас бесплатно</p>
+        <div class="ask-form__field ask-form__field--textarea">
+          <label class="visually-hidden" for="ask-modal-customer-question">Ваш вопрос</label>
+          <textarea name="ask-modal-customer-question" id="ask-modal-customer-question" cols="30" rows="5" placeholder="Ваш вопрос" required=""></textarea>
+        </div>
 
-            <div class="ask-form__field ask-form__personal-data">
-              <label class="visually-hidden" for="ask-form-customer-name">Имя</label>
-              <input id="ask-form-customer-name" type="text" name="ask-form-customer-name" placeholder="Имя" required="">
-            </div>
+        <button class="ask-form__field ask-form__submit button" type="submit">Отправить</button>
 
-            <div class="ask-form__field ask-form__personal-data ask-form__phone">
-              <label class="visually-hidden" for="ask-form-customer-tel">Телефон</label>
-              <input id="ask-form-customer-tel" type="tel" name="ask-form-customer-tel" placeholder="Телефон" required="">
-            </div>
-
-            <div class="ask-form__field ask-form__field--textarea">
-              <label class="visually-hidden" for="ask-form-customer-question">Ваш вопрос</label>
-              <textarea name="ask-form-customer-question" id="ask-form-customer-question" cols="30" rows="5" placeholder="Ваш вопрос" required=""></textarea>
-            </div>
-
-            <button class="ask-form__field  ask-form__submit button" type="submit">Задать вопрос</button>
-
-            <div class="ask-form__field ask-form__field--checkbox ask-form__consent">
-              <input id="ask-form-personal-data-consent" name="ask-form-personal-data-consent" type="checkbox" checked="" required="">
-              <label for="ask-form-personal-data-consent">Я согласен на обработку персональных данных</label>
-            </div>
-          </div>
+        <div class="ask-form__field ask-form__field--checkbox ask-form__consent">
+          <input id="ask-modal-personal-data-consent" name="ask-modal-personal-data-consent" type="checkbox" checked="" required="">
+          <label for="ask-modal-personal-data-consent">Я согласен на обработку персональных данных</label>
         </div>
       </form>
     </main>
@@ -300,38 +186,37 @@
           </div>
         </div>
 
-        <!-- "accordion--js" класс для оживления accordion -->
         <div class="page-footer__column page-footer__column--right">
           <div class="page-footer__accordion accordion">
             <nav class="accordion__item">
               <h2 tabindex="0">Разделы сайта</h2>
 
               <ul class="accordion__links accordion__links--columns">
-                <li>
+                <li class="accordion__link-wrapper">
                   <a href="#">О компании</a>
                 </li>
 
-                <li>
+                <li class="accordion__link-wrapper">
                   <a href="#">Продукты</a>
                 </li>
 
-                <li>
+                <li class="accordion__link-wrapper">
                   <a href="#">Производство печатных плат</a>
                 </li>
 
-                <li>
+                <li class="accordion__link-wrapper">
                   <a href="#">Монтаж печатных плат</a>
                 </li>
 
-                <li>
+                <li class="accordion__link-wrapper">
                   <a href="#">Комплектующие</a>
                 </li>
 
-                <li>
+                <li class="accordion__link-wrapper">
                   <a href="#">Доставка</a>
                 </li>
 
-                <li>
+                <li class="accordion__link-wrapper">
                   <a href="#">Контакты</a>
                 </li>
               </ul>
@@ -342,19 +227,19 @@
 
               <address>
                 <ul class="accordion__links">
-                  <li>
+                  <li class="accordion__link-wrapper">
                     <a href="#">г. Мытищи, Олимпийский проспект, д.10</a>
                   </li>
 
-                  <li>
+                  <li class="accordion__link-wrapper">
                     <a href="tel:+74955894050">+7 (495) 589-40-50</a>
                   </li>
 
-                  <li>
+                  <li class="accordion__link-wrapper">
                     <a href="tel:+79250038767">+7 (925) 003-87-67</a>
                   </li>
 
-                  <li>
+                  <li class="accordion__link-wrapper">
                     <a href="tel:+792692608079">+7 (926) 926-080-79</a>
                   </li>
                 </ul>
@@ -369,40 +254,6 @@
         </div>
       </div>
     </footer>
-
-    <div class="overlay overlay--hidden"></div>
-
-    <form class="ask-form ask-form--modal ask-form--hidden" id="ask-modal" action="https://echo.htmlacademy.ru/" method="POST">
-      <h2>Закажите звонок</h2>
-
-      <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
-
-      <button class="ask-form__modal-close" type="button">
-        <span class="visually-hidden">Закрыть окно</span>
-      </button>
-
-      <div class="ask-form__field ask-form__personal-data">
-        <label class="visually-hidden" for="ask-modal-customer-name">Имя</label>
-        <input id="ask-modal-customer-name" type="text" name="ask-modal-customer-name" placeholder="Имя" required="">
-      </div>
-
-      <div class="ask-form__field ask-form__personal-data ask-form__phone">
-        <label class="visually-hidden" for="ask-modal-customer-tel">Телефон</label>
-        <input id="ask-modal-customer-tel" type="tel" name="ask-modal-customer-tel" placeholder="Телефон" required="">
-      </div>
-
-      <div class="ask-form__field ask-form__field--textarea">
-        <label class="visually-hidden" for="ask-modal-customer-question">Ваш вопрос</label>
-        <textarea name="ask-modal-customer-question" id="ask-modal-customer-question" cols="30" rows="5" placeholder="Ваш вопрос" required=""></textarea>
-      </div>
-
-      <button class="ask-form__field ask-form__submit button" type="submit">Отправить</button>
-
-      <div class="ask-form__field ask-form__field--checkbox ask-form__consent">
-        <input id="ask-modal-personal-data-consent" name="ask-modal-personal-data-consent" type="checkbox" checked="" required="">
-        <label for="ask-modal-personal-data-consent">Я согласен на обработку персональных данных</label>
-      </div>
-    </form>
 
     <script src="js/vendor.js"></script>
     <script src="js/main.js"></script>
