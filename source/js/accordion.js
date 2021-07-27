@@ -19,19 +19,29 @@
     }
   }
 
-  function addSwitchClickEvent(switcher, content) {
-    switcher.addEventListener('click', function () {
-      accordionSwitchers.forEach(function (item, index) {
-        if (item !== switcher) {
-          hideAccordionContent(item, accordionContents[index]);
-        }
-      });
+  function controlAccordionContent(switcher, content) {
+    accordionSwitchers.forEach(function (item, index) {
+      if (item !== switcher) {
+        hideAccordionContent(item, accordionContents[index]);
+      }
+    });
 
-      toggleAccordionContent(switcher, content);
+    toggleAccordionContent(switcher, content);
+  }
+
+  function addSwitcherEvents(switcher, content) {
+    switcher.addEventListener('click', function () {
+      controlAccordionContent(switcher, content);
+    });
+
+    switcher.addEventListener('keydown', function (evt) {
+      if (evt.key === 'Enter') {
+        controlAccordionContent(switcher, content);
+      }
     });
   }
 
   accordionSwitchers.forEach(function (item, index) {
-    addSwitchClickEvent(item, accordionContents[index]);
+    addSwitcherEvents(item, accordionContents[index]);
   });
 })();
