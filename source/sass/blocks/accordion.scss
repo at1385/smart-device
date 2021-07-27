@@ -42,8 +42,15 @@
       color: rgba($darkest, 0.8);
     }
 
+    &:focus {
+      outline: 1px dotted rgba($darkest, 0.6);
+      outline-offset: 2px;
+    }
+
     &:active {
       color: rgba($darkest, 0.2);
+
+      outline: none;
     }
   }
 }
