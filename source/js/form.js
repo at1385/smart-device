@@ -3,15 +3,16 @@
 (function () {
   var PHONE_LENGTH = 18;
 
-  var askFormFields = document.querySelectorAll('.ask-form__field');
-  var askFormCheckboxes = document.querySelectorAll('.ask-form__checkbox');
-  var askFormLabels = document.querySelectorAll('.ask-form__label');
-  var askFormPhones = document.querySelectorAll('.phone-field');
+  var askFormPersonalDataWrappers = document.querySelectorAll('.ask-form__personal-data');
+  var askFormPersonalDataFields = document.querySelectorAll('.ask-form__personal-data input');
+  var askFormConsentWrappers = document.querySelectorAll('.ask-form__consent');
+  var askFormConsentCheckboxes = document.querySelectorAll('.ask-form__consent input');
+  var askFormPhones = document.querySelectorAll('.ask-form__phone input');
   var askFormSubmits = document.querySelectorAll('.ask-form__submit');
 
   // маска телефона
   window.$(document).ready(function () {
-    window.$('.phone-field').mask('+7 (000) 000 00 00');
+    window.$('.ask-form__phone input').mask('+7 (000) 000 00 00');
   });
 
   // Проверка длины номера телефона
@@ -68,32 +69,32 @@
   }
 
   // добавление обработчиков события 'focus' элементам формы, для удаления класса стилей невалидного элемента
-  if (askFormFields) {
-    askFormFields.forEach(function (item) {
+  if (askFormPersonalDataWrappers && askFormPersonalDataFields) {
+    askFormPersonalDataFields.forEach(function (item, index) {
       item.addEventListener('focus', function () {
-        removeInvalidStyle(item, 'ask-form__field--invalid');
+        removeInvalidStyle(item, 'ask-form__field--invalid', askFormPersonalDataWrappers[index]);
       });
     });
   }
 
-  if (askFormCheckboxes) {
-    askFormCheckboxes.forEach(function (item, index) {
+  if (askFormConsentWrappers && askFormConsentCheckboxes) {
+    askFormConsentCheckboxes.forEach(function (item, index) {
       item.addEventListener('focus', function () {
-        removeInvalidStyle(item, 'ask-form__label--invalid', askFormLabels[index]);
+        removeInvalidStyle(item, 'ask-form__field--invalid-checkbox', askFormConsentWrappers[index]);
       });
     });
   }
 
   // добавление невалидным элементам класса стилей невалидного элемента формы при её отправке
-  if (askFormSubmits && askFormFields && askFormCheckboxes && askFormLabels) {
+  if (askFormSubmits && askFormPersonalDataFields && askFormPersonalDataWrappers && askFormConsentCheckboxes && askFormConsentWrappers) {
     askFormSubmits.forEach(function (item) {
       item.addEventListener('click', function () {
-        for (var i = 0; i < askFormFields.length; i++) {
-          setInvalidStyle(askFormFields[i], 'ask-form__field--invalid');
+        for (var i = 0; i < askFormPersonalDataFields.length; i++) {
+          setInvalidStyle(askFormPersonalDataFields[i], 'ask-form__field--invalid', askFormPersonalDataWrappers[i]);
         }
 
-        for (var j = 0; j < askFormCheckboxes.length; j++) {
-          setInvalidStyle(askFormCheckboxes[j], 'ask-form__label--invalid', askFormLabels[j]);
+        for (var j = 0; j < askFormConsentCheckboxes.length; j++) {
+          setInvalidStyle(askFormConsentCheckboxes[j], 'ask-form__field--invalid-checkbox', askFormConsentWrappers[j]);
         }
       });
     });
