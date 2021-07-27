@@ -2,14 +2,14 @@
   position: relative;
 
   padding-top: 65px;
-  padding-bottom: 15px;
+  padding-bottom: 11px;
 
   background-color: $light;
 
   &::before {
     content: "";
     position: absolute;
-    bottom: 49px;
+    bottom: 53px;
     left: 0;
 
     width: 100%;
@@ -54,7 +54,7 @@
 
 @media (max-width: $tablet-max-width) {
   .page-footer {
-    padding-top: 20px;
+    padding: 20px 0;
 
     &::before {
       display: none;
@@ -109,7 +109,7 @@
 
   .page-footer__accordion {
     margin-bottom: 24px;
-    padding-top: 38px;
+    padding-top: 37px;
     padding-right: 37px;
     padding-left: 25px;
   }
@@ -118,7 +118,7 @@
 @media (max-width: $mobile-max-width) {
   .page-footer {
     padding-top: 46px;
-    padding-bottom: 30px;
+    padding-bottom: 25px;
   }
 
   .page-footer__column {
@@ -126,7 +126,7 @@
     padding: 0 15px;
 
     &--left {
-      margin-bottom: 47px;
+      margin-bottom: 49px;
     }
 
     &--right {
@@ -136,11 +136,11 @@
 
   .page-footer__site-logo {
     margin: 0 auto;
-    margin-bottom: 29px;
+    margin-bottom: 25px;
   }
 
   .page-footer__copyright {
-    margin-bottom: 36px;
+    margin-bottom: 32px;
 
     &--container {
       margin-bottom: 0;
@@ -149,7 +149,7 @@
 
     a {
       &:not(:last-child) {
-        margin-bottom: 27px;
+        margin-bottom: 20px;
       }
     }
   }

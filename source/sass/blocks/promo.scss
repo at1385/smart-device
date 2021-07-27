@@ -27,7 +27,7 @@
 
     max-width: 700px;
     margin: 0;
-    margin-bottom: 43px;
+    margin-bottom: 41px;
     padding-left: 92px;
 
     text-transform: lowercase;
@@ -84,8 +84,15 @@
     color: $lightest;
   }
 
+  &:focus {
+    outline: 1px dotted rgba($lightest, 0.3);
+    outline-offset: 3px;
+  }
+
   &:active {
     color: rgba($lightest, 0.2);
+
+    outline: none;
   }
 }
 

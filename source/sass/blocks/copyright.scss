@@ -3,6 +3,7 @@
   justify-content: space-between;
 
   font-size: 13px;
+  line-height: 24px;
   letter-spacing: 0.04em;
   color: rgba($darkest, 0.5);
   text-transform: uppercase;
@@ -23,8 +24,15 @@
       color: rgba($darkest, 0.8);
     }
 
+    &:focus {
+      outline: 1px dotted rgba($darkest, 0.6);
+      outline-offset: 2px;
+    }
+
     &:active {
       color: rgba($darkest, 0.2);
+
+      outline: none;
     }
   }
 }

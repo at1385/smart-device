@@ -3,7 +3,7 @@
 
   background-image: url("../img/bg-page-main-desktop.svg");
   background-repeat: no-repeat;
-  background-position: 50% 33%;
+  background-position: 50% -29px;
 
   &--modal {
     padding: 75px 0;
@@ -13,27 +13,27 @@
 }
 
 .page-main__features {
-  margin-bottom: 104px;
+  margin-bottom: 102px;
 }
 
 .page-main__about {
-  margin-bottom: 111px;
+  margin-bottom: 100px;
 }
 
 @media (max-width: $tablet-max-width) {
   .page-main {
-    padding-top: 55px;
+    padding-top: 53px;
 
     background-image: url("../img/bg-page-main-tablet.svg");
-    background-position: right 23%;
+    background-position: right 90px;
   }
 
   .page-main__features {
-    margin-bottom: 55px;
+    margin-bottom: 57px;
   }
 
   .page-main__about {
-    margin-bottom: 83px;
+    margin-bottom: 81px;
   }
 }
 
@@ -49,6 +49,6 @@
   }
 
   .page-main__about {
-    margin-bottom: 65px;
+    margin-bottom: 64px;
   }
 }

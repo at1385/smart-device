@@ -70,6 +70,7 @@
           <div class="promo__image">
             <picture>
               <source type="image/webp" srcset="img/content-board.webp 1x, img/content-board@2x.webp 2x">
+              <!-- 1х: 705px; 2x: 1410px -->
               <img src="img/content-board.png" srcset="img/content-board@2x.png 2x" width="705" height="515" alt="Печатная плата производства Smart Device">
             </picture>
           </div>
@@ -168,29 +169,26 @@
 
             <p>Мы проконсультируем Вас бесплатно</p>
 
-            <div class="ask-form__columns-wrapper">
-              <div class="ask-form__column">
-                <label class="visually-hidden" for="ask-form-customer-name">Имя</label>
-                <input class="ask-form__field" id="ask-form-customer-name" type="text" name="ask-form-customer-name" placeholder="Имя" required>
-              </div>
-
-              <div class="ask-form__column">
-                <label class="visually-hidden" for="ask-form-customer-tel">Телефон</label>
-                <input class="ask-form__field phone-field" id="ask-form-customer-tel" type="tel" name="ask-form-customer-tel" placeholder="Телефон" required>
-              </div>
+            <div class="ask-form__field ask-form__personal-data">
+              <label class="visually-hidden" for="ask-form-customer-name">Имя</label>
+              <input id="ask-form-customer-name" type="text" name="ask-form-customer-name" placeholder="Имя" required>
             </div>
 
-            <label class="visually-hidden" for="ask-form-customer-question">Ваш вопрос</label>
-            <textarea class="ask-form__field ask-form__field--textarea" name="ask-form-customer-question" id="ask-form-customer-question" cols="30" rows="5"
-              placeholder="Ваш вопрос" required></textarea>
+            <div class="ask-form__field ask-form__personal-data ask-form__phone">
+              <label class="visually-hidden" for="ask-form-customer-tel">Телефон</label>
+              <input id="ask-form-customer-tel" type="tel" name="ask-form-customer-tel" placeholder="Телефон" required>
+            </div>
 
-            <div class="ask-form__columns-wrapper">
-              <button class="ask-form__column ask-form__submit button" type="submit">Задать вопрос</button>
+            <div class="ask-form__field ask-form__field--textarea">
+              <label class="visually-hidden" for="ask-form-customer-question">Ваш вопрос</label>
+              <textarea name="ask-form-customer-question" id="ask-form-customer-question" cols="30" rows="5" placeholder="Ваш вопрос" required></textarea>
+            </div>
 
-              <div class="ask-form__column ask-form__column--checkbox">
-                <input class="ask-form__checkbox visually-hidden" id="ask-form-personal-data-consent" type="checkbox" checked required>
-                <label class="ask-form__label" for="ask-form-personal-data-consent">Я согласен на обработку персональных данных</label>
-              </div>
+            <button class="ask-form__field  ask-form__submit button" type="submit">Задать вопрос</button>
+
+            <div class="ask-form__field ask-form__field--checkbox ask-form__consent">
+              <input id="ask-form-personal-data-consent" name="ask-form-personal-data-consent" type="checkbox" checked required>
+              <label for="ask-form-personal-data-consent">Я согласен на обработку персональных данных</label>
             </div>
           </div>
         </div>
@@ -248,37 +246,38 @@
           </div>
         </div>
 
+        <!-- "accordion--js" класс для оживления accordion -->
         <div class="page-footer__column page-footer__column--right">
           <div class="page-footer__accordion accordion">
             <nav class="accordion__item">
               <h2 tabindex="0">Разделы сайта</h2>
 
               <ul class="accordion__links accordion__links--columns">
-                <li class="accordion__link-wrapper">
+                <li>
                   <a href="#">О компании</a>
                 </li>
 
-                <li class="accordion__link-wrapper">
+                <li>
                   <a href="#">Продукты</a>
                 </li>
 
-                <li class="accordion__link-wrapper">
+                <li>
                   <a href="#">Производство печатных плат</a>
                 </li>
 
-                <li class="accordion__link-wrapper">
+                <li>
                   <a href="#">Монтаж печатных плат</a>
                 </li>
 
-                <li class="accordion__link-wrapper">
+                <li>
                   <a href="#">Комплектующие</a>
                 </li>
 
-                <li class="accordion__link-wrapper">
+                <li>
                   <a href="#">Доставка</a>
                 </li>
 
-                <li class="accordion__link-wrapper">
+                <li>
                   <a href="#">Контакты</a>
                 </li>
               </ul>
@@ -289,19 +288,19 @@
 
               <address>
                 <ul class="accordion__links">
-                  <li class="accordion__link-wrapper">
+                  <li>
                     <a href="#">г. Мытищи, Олимпийский проспект, д.10</a>
                   </li>
 
-                  <li class="accordion__link-wrapper">
+                  <li>
                     <a href="tel:+74955894050">+7 (495) 589-40-50</a>
                   </li>
 
-                  <li class="accordion__link-wrapper">
+                  <li>
                     <a href="tel:+79250038767">+7 (925) 003-87-67</a>
                   </li>
 
-                  <li class="accordion__link-wrapper">
+                  <li>
                     <a href="tel:+792692608079">+7 (926) 926-080-79</a>
                   </li>
                 </ul>
@@ -328,27 +327,26 @@
         <span class="visually-hidden">Закрыть окно</span>
       </button>
 
-      <div class="ask-form__column">
+      <div class="ask-form__field ask-form__personal-data">
         <label class="visually-hidden" for="ask-modal-customer-name">Имя</label>
-        <input class="ask-form__field" id="ask-modal-customer-name" type="text" name="ask-modal-customer-name" placeholder="Имя" required>
+        <input id="ask-modal-customer-name" type="text" name="ask-modal-customer-name" placeholder="Имя" required>
       </div>
 
-      <div class="ask-form__column">
+      <div class="ask-form__field ask-form__personal-data ask-form__phone">
         <label class="visually-hidden" for="ask-modal-customer-tel">Телефон</label>
-        <input class="ask-form__field phone-field" id="ask-modal-customer-tel" type="tel" name="ask-modal-customer-tel" placeholder="Телефон" required>
+        <input id="ask-modal-customer-tel" type="tel" name="ask-modal-customer-tel" placeholder="Телефон" required>
       </div>
 
-      <div class="ask-form__column">
+      <div class="ask-form__field ask-form__field--textarea">
         <label class="visually-hidden" for="ask-modal-customer-question">Ваш вопрос</label>
-        <textarea class="ask-form__field ask-form__field--textarea" name="ask-modal-customer-question" id="ask-modal-customer-question" cols="30" rows="5" placeholder="Ваш вопрос"
-          required></textarea>
+        <textarea name="ask-modal-customer-question" id="ask-modal-customer-question" cols="30" rows="5" placeholder="Ваш вопрос" required></textarea>
       </div>
 
-      <button class="ask-form__column ask-form__submit button" type="submit">Отправить</button>
+      <button class="ask-form__field ask-form__submit button" type="submit">Отправить</button>
 
-      <div class="ask-form__column ask-form__column--checkbox">
-        <input class="ask-form__checkbox visually-hidden" id="ask-modal-personal-data-consent" name="ask-modal-personal-data-consent" type="checkbox" checked required>
-        <label class="ask-form__label" for="ask-modal-personal-data-consent">Я согласен на обработку персональных данных</label>
+      <div class="ask-form__field ask-form__field--checkbox ask-form__consent">
+        <input id="ask-modal-personal-data-consent" name="ask-modal-personal-data-consent" type="checkbox" checked required>
+        <label for="ask-modal-personal-data-consent">Я согласен на обработку персональных данных</label>
       </div>
     </form>
 
