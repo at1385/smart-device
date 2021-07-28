@@ -7,6 +7,22 @@
 
   accordion.classList.add('accordion--js');
 
+  function addAccordionSwitchersFocus() {
+    accordionSwitchers.forEach(function (item) {
+      if (accordion.classList.contains('accordion--js') && window.matchMedia('screen and (max-width: 767px)').matches) {
+        item.setAttribute('tabindex', 0);
+      } else if (item.getAttribute('tabindex')) {
+        item.removeAttribute('tabindex');
+      }
+    });
+  }
+
+  addAccordionSwitchersFocus();
+
+  window.addEventListener('resize', function () {
+    addAccordionSwitchersFocus();
+  });
+
   function toggleAccordionContent(switcher, content) {
     switcher.classList.toggle('accordion__opened-item');
     content.classList.toggle('accordion__links--opened');
