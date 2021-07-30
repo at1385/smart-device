@@ -197,8 +197,8 @@
     </main>
 
     <footer class="page-footer">
-      <div class="page-footer__wrapper container">
-        <div class="page-footer__column page-footer__column--left">
+      <div class="page-footer__columns-wrapper container">
+        <div class="page-footer__left-column">
           <a class="page-footer__site-logo site-logo site-logo--footer">
             <svg class="site-logo__icon" width="52" height="52">
               <use xlink:href="#inline-logo-site-icon"></use>
@@ -208,6 +208,12 @@
               <use xlink:href="#inline-logo-site-name-dark"></use>
             </svg>
           </a>
+
+          <ul class="page-footer__copyright-left-column copyright copyright--left-column">
+            <li>
+              <p>1999-2018 SD Service Devices</p>
+            </li>
+          </ul>
 
           <ul class="page-footer__socials socials">
             <li class="socials__item">
@@ -240,15 +246,10 @@
               </a>
             </li>
           </ul>
-
-          <div class="page-footer__copyright copyright">
-            <p class="copyright__hidden">Все права защищены</p>
-            <p>1999-2018 SD Service Devices</p>
-          </div>
         </div>
 
         <!-- "accordion--js" класс для оживления accordion -->
-        <div class="page-footer__column page-footer__column--right">
+        <div class="page-footer__right-column">
           <div class="page-footer__accordion accordion">
             <nav class="accordion__item">
               <h2>Разделы сайта</h2>
@@ -308,11 +309,30 @@
               </address>
             </div>
           </div>
+        </div>
+      </div>
 
-          <div class="page-footer__copyright page-footer__copyright--container copyright copyright--left-shift">
-            <a href="#">Условия конфиденциальности</a>
-            <a href="#">Developed by Wow Studio</a>
-          </div>
+      <div class="page-footer__row">
+        <div class="page-footer__copyright container">
+          <ul class="copyright copyright--hidden">
+            <li>
+              <p>Все права защищены</p>
+            </li>
+
+            <li>
+              <p>1999-2018 SD Service Devices</p>
+            </li>
+          </ul>
+
+          <ul class="copyright">
+            <li>
+              <a href="#">Условия конфиденциальности</a>
+            </li>
+
+            <li>
+              <a href="#">Developed by Wow Studio</a>
+            </li>
+          </ul>
         </div>
       </div>
     </footer>
