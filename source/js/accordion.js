@@ -2,10 +2,33 @@
 
 (function () {
   var accordion = document.querySelector('.accordion');
-  var accordionSwitchers = accordion.querySelectorAll('.accordion h2');
-  var accordionContents = accordion.querySelectorAll('.accordion__links');
 
-  accordion.classList.add('accordion--js');
+  if (accordion) {
+    var accordionSwitchers = accordion.querySelectorAll('.accordion h2');
+    var accordionContents = accordion.querySelectorAll('.accordion__links');
+  }
+
+  if (accordion) {
+    accordion.classList.add('accordion--js');
+  }
+
+  function addAccordionSwitchersFocus() {
+    if (accordionSwitchers) {
+      accordionSwitchers.forEach(function (item) {
+        if (accordion.classList.contains('accordion--js') && window.matchMedia('screen and (max-width: 767px)').matches) {
+          item.setAttribute('tabindex', 0);
+        } else if (item.getAttribute('tabindex')) {
+          item.removeAttribute('tabindex');
+        }
+      });
+    }
+  }
+
+  addAccordionSwitchersFocus();
+
+  window.addEventListener('resize', function () {
+    addAccordionSwitchersFocus();
+  });
 
   function toggleAccordionContent(switcher, content) {
     switcher.classList.toggle('accordion__opened-item');
@@ -41,7 +64,9 @@
     });
   }
 
-  accordionSwitchers.forEach(function (item, index) {
-    addSwitcherEvents(item, accordionContents[index]);
-  });
+  if (accordionSwitchers) {
+    accordionSwitchers.forEach(function (item, index) {
+      addSwitcherEvents(item, accordionContents[index]);
+    });
+  }
 })();

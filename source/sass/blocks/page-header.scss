@@ -22,13 +22,21 @@
   grid-template-columns: 202px 1fr 180px;
   grid-column-gap: 45px;
   justify-items: end;
-  align-items: center;
+  align-items: start;
   margin-bottom: 173px;
 
   &--modal {
     grid-template-columns: 202px 1fr;
     margin-bottom: 0;
   }
+}
+
+.page-header__contacts {
+  align-self: center;
+}
+
+.page-header__modal-open {
+  margin-top: 3px;
 }
 
 @media (max-width: $tablet-max-width) {

@@ -182,7 +182,7 @@
 
             <div class="ask-form__field ask-form__field--textarea">
               <label class="visually-hidden" for="ask-form-customer-question">Ваш вопрос</label>
-              <textarea name="ask-form-customer-question" id="ask-form-customer-question" cols="30" rows="5" placeholder="Ваш вопрос" required></textarea>
+              <textarea name="ask-form-customer-question" id="ask-form-customer-question" cols="30" rows="5" placeholder="Ваш вопрос"></textarea>
             </div>
 
             <button class="ask-form__field  ask-form__submit button" type="submit">Задать вопрос</button>
@@ -197,8 +197,8 @@
     </main>
 
     <footer class="page-footer">
-      <div class="page-footer__wrapper container">
-        <div class="page-footer__column page-footer__column--left">
+      <div class="page-footer__columns-wrapper container">
+        <div class="page-footer__left-column">
           <a class="page-footer__site-logo site-logo site-logo--footer">
             <svg class="site-logo__icon" width="52" height="52">
               <use xlink:href="#inline-logo-site-icon"></use>
@@ -208,6 +208,12 @@
               <use xlink:href="#inline-logo-site-name-dark"></use>
             </svg>
           </a>
+
+          <ul class="page-footer__copyright-left-column copyright copyright--left-column">
+            <li>
+              <p>1999-2018 SD Service Devices</p>
+            </li>
+          </ul>
 
           <ul class="page-footer__socials socials">
             <li class="socials__item">
@@ -240,18 +246,13 @@
               </a>
             </li>
           </ul>
-
-          <div class="page-footer__copyright copyright">
-            <p class="copyright__hidden">Все права защищены</p>
-            <p>1999-2018 SD Service Devices</p>
-          </div>
         </div>
 
         <!-- "accordion--js" класс для оживления accordion -->
-        <div class="page-footer__column page-footer__column--right">
+        <div class="page-footer__right-column">
           <div class="page-footer__accordion accordion">
             <nav class="accordion__item">
-              <h2 tabindex="0">Разделы сайта</h2>
+              <h2>Разделы сайта</h2>
 
               <ul class="accordion__links accordion__links--columns">
                 <li>
@@ -285,7 +286,7 @@
             </nav>
 
             <div class="accordion__item">
-              <h2 tabindex="0">Наш офис</h2>
+              <h2>Наш офис</h2>
 
               <address>
                 <ul class="accordion__links">
@@ -308,11 +309,30 @@
               </address>
             </div>
           </div>
+        </div>
+      </div>
 
-          <div class="page-footer__copyright page-footer__copyright--container copyright copyright--left-shift">
-            <a href="#">Условия конфиденциальности</a>
-            <a href="#">Developed by Wow Studio</a>
-          </div>
+      <div class="page-footer__row">
+        <div class="page-footer__copyright container">
+          <ul class="copyright copyright--hidden">
+            <li>
+              <p>Все права защищены</p>
+            </li>
+
+            <li>
+              <p>1999-2018 SD Service Devices</p>
+            </li>
+          </ul>
+
+          <ul class="copyright">
+            <li>
+              <a href="#">Условия конфиденциальности</a>
+            </li>
+
+            <li>
+              <a href="#">Developed by Wow Studio</a>
+            </li>
+          </ul>
         </div>
       </div>
     </footer>
@@ -320,34 +340,36 @@
     <div class="overlay overlay--hidden"></div>
 
     <form class="ask-form ask-form--modal ask-form--hidden" id="ask-modal" action="https://echo.htmlacademy.ru/" method="POST">
-      <h2>Закажите звонок</h2>
+      <div class="ask-form__modal-wrapper" data-simplebar>
+        <h2>Закажите звонок</h2>
 
-      <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
+        <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
 
-      <button class="ask-form__modal-close" type="button">
-        <span class="visually-hidden">Закрыть окно</span>
-      </button>
+        <button class="ask-form__modal-close" type="button">
+          <span class="visually-hidden">Закрыть окно</span>
+        </button>
 
-      <div class="ask-form__field ask-form__personal-data">
-        <label class="visually-hidden" for="ask-modal-customer-name">Имя</label>
-        <input id="ask-modal-customer-name" type="text" name="ask-modal-customer-name" placeholder="Имя" required>
-      </div>
+        <div class="ask-form__field ask-form__personal-data">
+          <label class="visually-hidden" for="ask-modal-customer-name">Имя</label>
+          <input id="ask-modal-customer-name" type="text" name="ask-modal-customer-name" placeholder="Имя" required>
+        </div>
 
-      <div class="ask-form__field ask-form__personal-data ask-form__phone">
-        <label class="visually-hidden" for="ask-modal-customer-tel">Телефон</label>
-        <input id="ask-modal-customer-tel" type="tel" name="ask-modal-customer-tel" placeholder="Телефон" required>
-      </div>
+        <div class="ask-form__field ask-form__personal-data ask-form__phone">
+          <label class="visually-hidden" for="ask-modal-customer-tel">Телефон</label>
+          <input id="ask-modal-customer-tel" type="tel" name="ask-modal-customer-tel" placeholder="Телефон" required>
+        </div>
 
-      <div class="ask-form__field ask-form__field--textarea">
-        <label class="visually-hidden" for="ask-modal-customer-question">Ваш вопрос</label>
-        <textarea name="ask-modal-customer-question" id="ask-modal-customer-question" cols="30" rows="5" placeholder="Ваш вопрос" required></textarea>
-      </div>
+        <div class="ask-form__field ask-form__field--textarea">
+          <label class="visually-hidden" for="ask-modal-customer-question">Ваш вопрос</label>
+          <textarea name="ask-modal-customer-question" id="ask-modal-customer-question" cols="30" rows="5" placeholder="Ваш вопрос"></textarea>
+        </div>
 
-      <button class="ask-form__field ask-form__submit button" type="submit">Отправить</button>
+        <button class="ask-form__field ask-form__submit button" type="submit">Отправить</button>
 
-      <div class="ask-form__field ask-form__field--checkbox ask-form__consent">
-        <input id="ask-modal-personal-data-consent" name="ask-modal-personal-data-consent" type="checkbox" checked required>
-        <label for="ask-modal-personal-data-consent">Я согласен на обработку персональных данных</label>
+        <div class="ask-form__field ask-form__field--checkbox ask-form__consent">
+          <input id="ask-modal-personal-data-consent" name="ask-modal-personal-data-consent" type="checkbox" checked required>
+          <label for="ask-modal-personal-data-consent">Я согласен на обработку персональных данных</label>
+        </div>
       </div>
     </form>
 
