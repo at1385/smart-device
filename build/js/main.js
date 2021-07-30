@@ -2,10 +2,33 @@
 
 (function () {
   var accordion = document.querySelector('.accordion');
-  var accordionSwitchers = accordion.querySelectorAll('.accordion h2');
-  var accordionContents = accordion.querySelectorAll('.accordion__links');
 
-  accordion.classList.add('accordion--js');
+  if (accordion) {
+    var accordionSwitchers = accordion.querySelectorAll('.accordion h2');
+    var accordionContents = accordion.querySelectorAll('.accordion__links');
+  }
+
+  if (accordion) {
+    accordion.classList.add('accordion--js');
+  }
+
+  function addAccordionSwitchersFocus() {
+    if (accordionSwitchers) {
+      accordionSwitchers.forEach(function (item) {
+        if (accordion.classList.contains('accordion--js') && window.matchMedia('screen and (max-width: 767px)').matches) {
+          item.setAttribute('tabindex', 0);
+        } else if (item.getAttribute('tabindex')) {
+          item.removeAttribute('tabindex');
+        }
+      });
+    }
+  }
+
+  addAccordionSwitchersFocus();
+
+  window.addEventListener('resize', function () {
+    addAccordionSwitchersFocus();
+  });
 
   function toggleAccordionContent(switcher, content) {
     switcher.classList.toggle('accordion__opened-item');
@@ -41,9 +64,11 @@
     });
   }
 
-  accordionSwitchers.forEach(function (item, index) {
-    addSwitcherEvents(item, accordionContents[index]);
-  });
+  if (accordionSwitchers) {
+    accordionSwitchers.forEach(function (item, index) {
+      addSwitcherEvents(item, accordionContents[index]);
+    });
+  }
 })();
 
 'use strict';
@@ -155,11 +180,25 @@
   var body = document.querySelector('body');
   var askModalOpenButton = document.querySelector('.page-header__modal-open');
   var askModal = document.querySelector('.ask-form--modal');
+  var askModalScrollbar = document.querySelector('.ask-form__modal-wrapper');
   var askModalCloseButton = askModal.querySelector('.ask-form__modal-close');
   var askModalCustomerName = askModal.querySelector('#ask-modal-customer-name');
   var askModalCustomerPhone = askModal.querySelector('#ask-modal-customer-tel');
   var askModalCustomerQuestion = askModal.querySelector('#ask-modal-customer-question');
   var overlay = document.querySelector('.overlay');
+
+  // скрытие/показ вертикального скроллбара для браузерного скроллбара по умолчанию
+  function toggleDefaultScrollbar(element, minHeight, styleClass) {
+    if (window.matchMedia(minHeight).matches) {
+      element.classList.add(styleClass);
+    } else {
+      element.classList.remove(styleClass);
+    }
+  }
+
+  window.addEventListener('resize', function () {
+    toggleDefaultScrollbar(askModalScrollbar, '(min-height: 605px)', 'ask-form__modal-wrapper--hidden-scroll');
+  });
 
   var isStorageSupport = true;
   var nameStorage = '';
